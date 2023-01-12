@@ -75,5 +75,5 @@
 
 На слайд вынесена часть кода, который отвечает за отправку изображения с графическими примитивами на веб-сервер.
 
-Ссылка на - > [github ](https://github.com/Xysha/h3/blob/main/README.md)
+Ссылка на - > [github ](https://github.com/Xysha/h3/tree/main/h3)
 
