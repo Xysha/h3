@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <body>
+    <div>
+      <canvas
+        id="canvas"
+        width="1000"
+        height="400"
+        style="border: 1px solid black;"
+      ></canvas>
+    </div>
+    <div style="margin-top: 5px;">
+      <span>Размер кисти: </span>
+      <input
+        type="range"
+        min="1"
+        max="50"
+        value="25"
+        class="size"
+        id="sizeRange"
+      />
+    </div>
+    <div style="margin-top: 5px;">
+      <span>Цвет: </span>
+      <input type="radio" name="colorRadio" value="black" checked />
+      <label for="black">Черный</label>
+      <input type="radio" name="colorRadio" value="white" />
+      <label for="black">Белый</label>
+      <input type="radio" name="colorRadio" value="red" />
+      <label for="black">Красный</label>
+      <input type="radio" name="colorRadio" value="green" />
+      <label for="black">Зеленый</label>
+      <input type="radio" name="colorRadio" value="blue" />
+      <label for="black">Синий</label>
+    </div>
+    <div style="margin-top: 5px;">
+      <button id="clear">Очистить холст</button>
+    </div>
+      <br/>
+    <input id="upload" type="file" accept="image/*" />
+    <br/>
+    <form method="get">
+        <br/>
+      <button type="button" onClick="save()">Загрузить фото на сервер</button>
+        <br/>
+    </form>
+    {% load static %}
+    <script src="{% static '/draw.js' %}"></script>
+    {% block content %}{% endblock %}
+  </body>
+</html>
